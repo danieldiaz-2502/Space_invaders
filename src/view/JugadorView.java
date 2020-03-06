@@ -1,21 +1,24 @@
-package model;
+package view;
 
 import processing.core.PApplet;
 
-
-public class Enemigo {
+public class JugadorView {
 	
 	PApplet app;
 	protected int x;
 	protected int y;
 	protected int tam;
-	protected int vel;
+	protected int movX;
 
-	public Enemigo(int x, int y, int tam, int vel, PApplet app) {
+	public JugadorView(int x, int y, int tam, int movX, PApplet app) {
 		this.app = app;
 		this.x = x;
 		this.y = y;
 		this.tam = 30;
+	}
+	
+	public void dibujarJugador() {
+		app.rect(this.x,this.y,this.tam,this.tam);
 	}
 
 	public PApplet getApp() {
@@ -50,12 +53,12 @@ public class Enemigo {
 		this.tam = tam;
 	}
 
-	public int getVel() {
-		return vel;
+	public int getMovX() {
+		return movX;
 	}
 
-	public void setVel(int vel) {
-		this.vel = vel;
+	public void setMovX(int movX) {
+		this.movX = movX;
 	}
 	
 	

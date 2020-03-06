@@ -4,13 +4,16 @@ import processing.core.PApplet;
 
 public class Main extends PApplet {
 	
+	JugadorView jugador;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		PApplet.main("main.Main");
+		PApplet.main("view.Main");
 	}
 	
     public void settings() {
-		size(340,600);
+		size(500,500);
+		jugador = new JugadorView(250,400,25,25,this);
 	}
     
 	public void setup() {
@@ -18,6 +21,6 @@ public class Main extends PApplet {
 	}
 	
     public void draw() {
-    	
+    	jugador.dibujarJugador();
     }
 }
