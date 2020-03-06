@@ -11,7 +11,10 @@ public class EnemigoController extends ModelE{
 	}
 
 	public void mover() {
-		this.x += vel;
+		this.y += vel;
+		if (this.y >= 500) {
+			this.y = 0;
+		}
 		
 
 	}
