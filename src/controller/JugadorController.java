@@ -3,21 +3,20 @@ package controller;
 import model.Jugador;
 import processing.core.PApplet;
 
-public class JugadorController {
+
+public class JugadorController extends Jugador{
 	
-	PApplet app;
-	public Jugador jugador = new Jugador(250,400,25,25);
-	
-	public JugadorController(PApplet app) {
-		this.app = app;
+	public JugadorController(int posX,int posY, int tam, PApplet y) {
+		super(posX, posY, tam, y);
 	}
 	
-	public void mover() {
-		if(app.keyCode == app.RIGHT) {
-			jugador.x += 20;
-		}
-		if(app.keyCode == app.LEFT) {
-			jugador.x -= 20;
-		}
+	
+	public void moverIzq() {
+		posX-=5;
 	}
-}
+	
+	public void moverDer() {
+		posX+=5;
+	}
+	
+
