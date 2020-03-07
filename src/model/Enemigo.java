@@ -2,44 +2,48 @@ package model;
 
 import processing.core.PApplet;
 
-
 public class Enemigo {
-	
+	int posX;
+	int posY;
+	int tam;
+	int vel;
 	PApplet app;
-	protected int x;
-	protected int y;
-	protected int tam;
-	protected int vel;
-
-	public Enemigo(int x, int y, int tam, int vel, PApplet app) {
-		this.app = app;
-		this.x = x;
-		this.y = y;
+	
+	public Enemigo(int posX, int posY, PApplet app) {
+		this.posX = posX;
+		this.posY = posY;
 		this.tam = 30;
-	}
-
-	public PApplet getApp() {
-		return app;
-	}
-
-	public void setApp(PApplet app) {
+		this.vel = 5;
 		this.app = app;
 	}
-
-	public int getX() {
-		return x;
+	
+	public void pintar() {
+		app.fill(0,250,0);
+		app.rect(this.posX, this.posY, this.tam, this.tam);
+	}
+	
+	public void mover() {
+		this.posY += this.vel;
+		
+		if(this.posY == 530) {
+			this.posY = -30;
+		}	
+   }
+	
+	public int getPosX() {
+		return posX;
 	}
 
-	public void setX(int x) {
-		this.x = x;
+	public void setPosX(int posX) {
+		this.posX = posX;
 	}
 
-	public int getY() {
-		return y;
+	public int getPosY() {
+		return posY;
 	}
 
-	public void setY(int y) {
-		this.y = y;
+	public void setPosY(int posY) {
+		this.posY = posY;
 	}
 
 	public int getTam() {
@@ -57,6 +61,13 @@ public class Enemigo {
 	public void setVel(int vel) {
 		this.vel = vel;
 	}
-	
-	
+
+	public PApplet getApp() {
+		return app;
+	}
+
+	public void setApp(PApplet app) {
+		this.app = app;
+	}
+
 }
