@@ -13,7 +13,6 @@ public class Jugador {
 	int y;
 	int tam;
 	int vel;
-	int laifs;
 	ArrayList<Bala> disparos;
 	PApplet app;
 	
@@ -25,7 +24,6 @@ public class Jugador {
 		this.tam = 20;
 		this.vel = 20;
 		this.app = app;
-		this.laifs = 30;
 	}
 	
 	public void pintar() {
@@ -99,14 +97,6 @@ public class Jugador {
 
 	public void setVel(int vel) {
 		this.vel = vel;
-	}
-
-	public int getLaifs() {
-		return laifs;
-	}
-
-	public void setLaifs(int laifs) {
-		this.laifs = laifs;
 	}
 
 	public ArrayList<Bala> getDisparos() {

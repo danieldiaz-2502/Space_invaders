@@ -11,7 +11,7 @@ public class Model {
 	Jugador player;
 	ArrayList<Enemigo> enemigos;
 	
-	public Jugador getH() {
+	public Jugador getPlayer() {
 		return player;
 	}
 	
@@ -26,7 +26,7 @@ public class Model {
 		}	
 	}
 	
-	public void ejecutar() {
+	public void jugar() {
 		
 		switch(pantalla) {
 		case 0:
@@ -47,20 +47,19 @@ public class Model {
 			for (int i = 0; i < enemigos.size(); i++) {
 			enemigos.get(i).mover();
 			enemigos.get(i).pintar();
-			System.out.println(enemigos.get(i).getPosY());
 			
-			if(enemigos.get(i).getPosY() > 43000) {
-				pantalla = 2;
+			if(enemigos.get(i).getPosY() >= 50000) {
+				pantalla = 3;
 			}
 
 			}
 			
 			for (int i = 0; i < player.getDisparos().size(); i++) {
 				for (int j = 0; j < enemigos.size(); j++) {
-					if(PApplet.dist(player.getDisparos().get(i).getPosX(), player.getDisparos().get(i).getPosY(), enemigos.get(j).getPosX()+25,
-						enemigos.get(j).getPosY())<25) {
+					if(PApplet.dist(player.getDisparos().get(i).getPosX(), player.getDisparos().get(i).getPosY(), enemigos.get(j).getPosX()+30,
+						enemigos.get(j).getPosY())<30) {
 						enemigos.remove(j);
-						player.getDisparos().get(i).setPosX(5000);
+						player.getDisparos().get(i).setPosX(80000);
 					}
 				}
 			}
@@ -70,7 +69,16 @@ public class Model {
 			break;
 		case 2:
 			app.background(250);
-			
+			app.background(0);
+			app.fill(0,250,0);
+			app.text("Ganaste",170,250);
+			app.textSize(25);
+			break;
+		case 3:
+			app.background(0);
+			app.fill(225,0,0);
+			app.text("Perdiste",170,250);
+			app.textSize(25);
 			break;
 		}	
 	}
