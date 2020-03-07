@@ -1,14 +1,32 @@
 package view;
 
 import processing.core.PApplet;
-import controller.JugadorController;
 
 public class JugadorView {
 	
-	JugadorController jugador = new Jugador();
+	PApplet app;
+	protected int x;
+	protected int y;
+	protected int tam;
+	protected int movX;
+
+	public JugadorView(int x, int y, int tam, int movX, PApplet app) {
+		this.app = app;
+		this.x = x;
+		this.y = y;
+		this.tam = 30;
+	}
 	
 	public void dibujarJugador() {
 		app.rect(this.x,this.y,this.tam,this.tam);
+	}
+	public void mover() {
+		if(app.keyCode == app.RIGHT) {
+			this.x += 20;
+		}
+		if(app.keyCode == app.LEFT) {
+			this.x -= 20;
+		}
 	}
 
 	public PApplet getApp() {

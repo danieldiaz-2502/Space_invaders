@@ -21,6 +21,10 @@ public class Main extends PApplet {
 	}
 	
     public void draw() {
+    	background(0);
     	jugador.dibujarJugador();
+    }
+    public void keyPressed() {
+    	jugador.mover();
     }
 }
