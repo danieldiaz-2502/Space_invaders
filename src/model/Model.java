@@ -21,7 +21,7 @@ public class Model {
 		player = new Jugador(350,470,app);
 		enemigos = new ArrayList<>();
 		for(int i = 0; i< 12; i++) {
-			enemigos.add(new Enemigo(50 * i,50,app));
+			enemigos.add(new Enemigo(43 * i,50,app));
 		}	
 	}
 	
@@ -49,6 +49,9 @@ public class Model {
 			
 			if(enemigos.get(i).getPosY() >= 500) {
 				pantalla = 3;
+			}
+			if(enemigos.size(i) == 0) {
+				pantalla = 2;
 			}
 
 			}
