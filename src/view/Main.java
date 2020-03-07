@@ -1,30 +1,39 @@
 package view;
 
+import model.Model;
 import processing.core.PApplet;
 
 public class Main extends PApplet {
 	
-	JugadorView jugador;
-	
+	SpaceView2 inicio;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PApplet.main("view.Main");
 	}
-	
-    public void settings() {
-		size(500,500);
-		jugador = new JugadorView(250,400,25,25,this);
-	}
-    
-	public void setup() {
+	public void settings () {
+		size (500,500);
 		
 	}
 	
-    public void draw() {
-    	background(0);
-    	jugador.dibujarJugador();
-    }
-    public void keyPressed() {
-    	jugador.mover();
-    }
+	public void setup () {
+		inicio = new SpaceView2(this);
+		
+	}
+	
+	public void draw () {
+	background(120,180,350);
+	inicio.iniciarJuego();
+	
+	}
+	
+	public void mousePressed() {
+	inicio.iniciarMouse();
+		
+	}
+	
+	public void keyPressed() {
+	inicio.iniciarEspacio();
+	}
+		
 }

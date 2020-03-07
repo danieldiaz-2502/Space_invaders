@@ -28,7 +28,7 @@ public class Jugador {
 	
 	public void pintar() {
 		app.fill(0,0,250);
-		app.ellipse(this.x,this.y,this.tam,this.tam);
+		app.rect(this.x,this.y,this.tam,this.tam);
 		for (int i = 0; i < disparos.size(); i++) {
 			disparos.get(i).pintar();
 		}

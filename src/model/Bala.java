@@ -12,7 +12,7 @@ public class Bala {
 	public Bala(int posX, int posY, PApplet app) {
 		this.posX = posX;
 		this.posY = posY;
-		this.tam = 30;
+		this.tam = 10;
 		this.vel = 5;
 		this.app = app;
 	}
@@ -23,7 +23,7 @@ public class Bala {
 	
 	public void disparar () {
 		app.fill(250,0,0);
-		app.rect(this.posX, this.posY, this.tam, this.tam+10);
+		app.ellipse(this.posX - 24, this.posY, this.tam, this.tam);
 		this.posY -= this.vel;
 	}
 

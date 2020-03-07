@@ -18,7 +18,7 @@ public class Controller2 {
 		model.jugar();
 	}
 	
-	public void tecla() {
+	public void espacio() {
 		model.key();
 	}
 	public void click() {

@@ -12,8 +12,8 @@ public class Enemigo {
 	public Enemigo(int posX, int posY, PApplet app) {
 		this.posX = posX;
 		this.posY = posY;
-		this.tam = 30;
-		this.vel = 5;
+		this.tam = 20;
+		this.vel = 1;
 		this.app = app;
 	}
 	
