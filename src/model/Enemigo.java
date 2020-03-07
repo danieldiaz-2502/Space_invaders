@@ -13,7 +13,7 @@ public class Enemigo {
 		this.posX = posX;
 		this.posY = posY;
 		this.tam = 20;
-		this.vel = 0;
+		this.vel = 1;
 		this.app = app;
 	}
 	

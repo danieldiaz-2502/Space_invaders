@@ -50,7 +50,7 @@ public class Model {
 			if(enemigos.get(i).getPosY() >= 500) {
 				pantalla = 3;
 			}
-			if(enemigos.size(i) == 0) {
+			if(enemigos.size() <= 0) {
 				pantalla = 2;
 			}
 
