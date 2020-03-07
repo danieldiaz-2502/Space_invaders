@@ -26,4 +26,46 @@ public class Bala {
 		app.rect(this.posX, this.posY, this.tam, this.tam+10);
 		this.posY -= this.vel;
 	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+	public int getTam() {
+		return tam;
+	}
+
+	public void setTam(int tam) {
+		this.tam = tam;
+	}
+
+	public int getVel() {
+		return vel;
+	}
+
+	public void setVel(int vel) {
+		this.vel = vel;
+	}
+
+	public PApplet getApp() {
+		return app;
+	}
+
+	public void setApp(PApplet app) {
+		this.app = app;
+	}
+	
+	
 }
